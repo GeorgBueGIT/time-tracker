@@ -199,7 +199,7 @@ function App() {
               key={entryIndex}
               className="border rounded p-3 mb-4 bg-light d-flex align-items-start gap-3 flex-wrap"
             >
-              <div className="d-flex flex-column flex-shrink-0" style={{ width: 350 }}>
+              <div className="d-flex flex-column flex-shrink-0">
                 <Input
                   value={entry.project}
                   onChange={(e) => updateProject(entryIndex, e.target.value)}
