@@ -154,7 +154,7 @@ function App() {
     return (
       <div className="mb-4">
         <div className="d-flex justify-content-between align-items-center mb-1">
-          <strong>Gesamtzeit: {Math.floor(totalMinutes / 60)}h {totalMinutes % 60}min / 8h</strong>
+          <strong>Total: {Math.floor(totalMinutes / 60)}h {totalMinutes % 60}min / 8h</strong>
         </div>
         <div className="d-flex rounded overflow-hidden" style={{ height: 24, background: '#f0f0f0' }}>
           {Object.entries(projectTimes).map(([project, minutes], index) => {
@@ -213,7 +213,7 @@ function App() {
                     rel="noopener noreferrer"
                     className="d-block mt-1 text-primary text-decoration-underline"
                   >
-                    Ticket öffnen
+                    Open Ticket
                   </a>
                 )}
               </div>
@@ -257,7 +257,7 @@ function App() {
                   className="btn btn-sm btn-outline-primary mt-1"
                   onClick={() => addTimeRange(entryIndex)}
                 >
-                  + Zeitintervall
+                  + Time Slot 
                 </button>
               </div>
 
@@ -274,7 +274,7 @@ function App() {
                 className="btn btn-sm btn-outline-danger align-self-start"
                 onClick={() => removeEntry(entryIndex)}
               >
-                Entfernen
+                Remove
               </button>
 
 
@@ -284,10 +284,10 @@ function App() {
 
         <div className="d-flex gap-2">
           <button className="btn btn-success" onClick={addEmptyEntry}>
-            <PlusCircleOutlined /> Neuer Eintrag
+            <PlusCircleOutlined /> New Entry
           </button>
           <button className="btn btn-danger" onClick={clearEntries}>
-            <ClearOutlined /> Leeren
+            <ClearOutlined /> Clear
           </button>
         </div>
       </>
