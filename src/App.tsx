@@ -27,6 +27,14 @@ function App() {
   })
 
   useEffect(() => {
+    const totalMinutes = Object.values(calculateProjectTimes()).reduce((a, b) => a + b, 0);
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    document.title = `${hours}h ${minutes}min - Time Tracker`;
+  }, [entries]);
+
+
+  useEffect(() => {
     const savedEntries = localStorage.getItem('entries')
     if (savedEntries) {
       setEntries(JSON.parse(savedEntries))
@@ -257,7 +265,7 @@ function App() {
                   className="btn btn-sm btn-outline-primary mt-1"
                   onClick={() => addTimeRange(entryIndex)}
                 >
-                  + Time Slot 
+                  + Time Slot
                 </button>
               </div>
 
