@@ -132,7 +132,7 @@ function App() {
     updated[entryIndex].ticket = value
     setEntries(updated)
   }
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const projectColor = (project: string, index: number): string => {
     const colors = [
       '#4F46E5', // Indigo
